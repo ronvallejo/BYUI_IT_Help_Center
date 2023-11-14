@@ -8,37 +8,38 @@
 </head>
 <body>
     <!-- Your website content -->
-       <!-- Feedback Widget -->
-<div id="feedback-widget">
-    <div id="stars" class="star-widget">
-        <input type="radio" name="rate" id="rate-5" />
-        <label for="rate-5" class="fas fa-star"></label>
-        <input type="radio" name="rate" id="rate-4" />
-        <label for="rate-4" class="fas fa-star"></label>
-        <input type="radio" name="rate" id="rate-3" />
-        <label for="rate-3" class="fas fa-star"></label>
-        <input type="radio" name="rate" id="rate-2" />
-        <label for="rate-2" class="fas fa-star"></label>
-        <input type="radio" name="rate" id="rate-1" />
-        <label for="rate-1" class="fas fa-star"></label>
+
+    <!-- Feedback Widget -->
+    <div id="feedback-widget">
+        <div id="stars" class="star-widget">
+            <input type="radio" name="rate" id="rate-5" />
+            <label for="rate-5" class="fas fa-star"></label>
+            <input type="radio" name="rate" id="rate-4" />
+            <label for="rate-4" class="fas fa-star"></label>
+            <input type="radio" name="rate" id="rate-3" />
+            <label for="rate-3" class="fas fa-star"></label>
+            <input type="radio" name="rate" id="rate-2" />
+            <label for="rate-2" class="fas fa-star"></label>
+            <input type="radio" name="rate" id="rate-1" />
+            <label for="rate-1" class="fas fa-star"></label>
+        </div>
+        <!-- Add more elements as needed -->
     </div>
-    <!-- Add more elements as needed -->
-</div>
 
-    </div>
-<script>
-const stars = document.querySelectorAll('.fa-star');
+    <!-- Your other scripts and content -->
 
-stars.forEach((star, index) => {
-    star.addEventListener('click', () => {
-        // Handle the selected rating (index + 1)
-        alert(`You selected ${index + 1} stars!`);
+    <!-- Add this script at the end of your body tag or in a separate file -->
+    <script>
+        const stars = document.querySelectorAll('.fa-star');
 
-        // You can send this rating to your SharePoint database here
-    });
-});
-</script>
+        stars.forEach((star, index) => {
+            star.addEventListener('click', () => {
+                // Handle the selected rating (index + 1)
+                alert(`You selected ${index + 1} stars!`);
 
+                // You can send this rating to your SharePoint database here
+            });
+        });
+    </script>
 </body>
-
 </html>
