@@ -9,3 +9,18 @@
     border-radius: 5px;
     cursor: pointer;
 }
+.star-widget {
+    display: inline-block;
+}
+
+.fas {
+    font-size: 24px;
+    color: #ffd700; /* Gold color for stars */
+    transition: transform 0.2s ease-in-out;
+}
+
+.fas:hover,
+.fas:hover ~ .fas {
+    transform: scale(1.1);
+}
+
