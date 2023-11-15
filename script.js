@@ -1,11 +1,23 @@
-// script.js
-const stars = document.querySelectorAll('.fa-star');
+document.addEventListener('DOMContentLoaded', function () {
+  const feedbackBox = document.querySelector('.feedback-box');
+  const rate = document.getElementById('starRating');
+  const commentBox = document.getElementById('commentBox');
 
-stars.forEach((star, index) => {
-    star.addEventListener('click', () => {
-        // Handle the selected rating (index + 1)
-        alert(`You selected ${index + 1} stars!`);
+  // Hide the comment box initially
+  commentBox.style.display = 'none';
 
-        // You can send this rating to your SharePoint database here
-    });
+  feedbackBox.addEventListener('mouseenter', function () {
+    rate.style.display = 'block';
+  });
+
+  feedbackBox.addEventListener('mouseleave', function () {
+    if (!rate.contains(document.activeElement)) {
+      rate.style.display = 'none';
+    }
+  });
+
+  rate.addEventListener('change', function () {
+    // Display the comment box when a star is clicked
+    commentBox.style.display = 'block';
+  });
 });
