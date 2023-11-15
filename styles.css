@@ -1,26 +1,80 @@
-#feedback-widget {
-    position: fixed;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: #3498db;
-    color: #fff;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-.star-widget {
-    display: inline-block;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.fas {
-    font-size: 24px;
-    color: #ffd700; /* Gold color for stars */
-    transition: transform 0.2s ease-in-out;
+body {
+  height: 100vh;
 }
 
-.fas:hover,
-.fas:hover ~ .fas {
-    transform: scale(1.1);
+.feedback-box {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: #3498db; /* Blue background color */
+  color: #fff; /* Text color */
+  padding: 10px;
+  border-top-right-radius: 10px; /* Optional: Add rounded corners */
+  display: flex;
+  align-items: center;
+  flex-direction: column; /* Added to stack the elements vertically */
 }
 
+.rate {
+  float: left;
+  height: 46px;
+  padding: 0 10px;
+  display: none;
+}
+
+.comment-box {
+  display: none;
+  margin-top: 10px;
+  width: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.feedback-box:hover .rate {
+  display: block;
+}
+
+.feedback-box:hover .comment-box {
+  display: block;
+}
+
+.rate:not(:checked)>input {
+  position: absolute;
+  top: -9999px;
+}
+
+.rate:not(:checked)>label {
+  float: right;
+  width: 1em;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 30px;
+  color: #ccc;
+}
+
+.rate:not(:checked)>label:before {
+  content: '★ ';
+}
+
+.rate>input:checked~label {
+  color: #ffc700;
+}
+
+.rate:not(:checked)>label:hover,
+.rate:not(:checked)>label:hover~label {
+  color: #deb217;
+}
+
+.rate>input:checked+label:hover,
+.rate>input:checked+label:hover~label,
+.rate>input:checked~label:hover,
+.rate>input:checked~label:hover~label,
+.rate>label:hover~input:checked~label {
+  color: #c59b08;
+}
