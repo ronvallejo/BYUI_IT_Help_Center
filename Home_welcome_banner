@@ -25,7 +25,7 @@
 <!-- Custom container to hold the banner -->
 <div class="container-image"><!-- Row in the Grid -->
 <div class="row"><!-- Responsive Column. Takes up all 12 columns -->
-<div class="col-xs-12 banner-img"><!-- Image for homepage --><img alt="Image of search field" class="img-responsive" src="https://td.byui.edu/SBTDPortal/Images/Viewer?fileName=2ba806e2-da85-4819-85a2-df8b4310b827.png&amp;beidInt=1" style="width: 1110px; height: 260px;" /></div>
+<div class="col-xs-12 banner-img"><!-- Image for homepage --><img alt="Image of search field" class="img-responsive" src="https://github.com/ronvallejo/IT_Help_Center/blob/87057b0a96fcf7684665a7154ae207407cce16a8/HelpCenter_Banner.png" style="width: 1110px; height: 260px;" /></div>
 </div>
 
 <div class="container-fluid site-search search-position" style="justify-content:center;">
