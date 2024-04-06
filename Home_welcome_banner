@@ -1,0 +1,61 @@
+<!-- Bootstrap 3.4.1 CSS import -->
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" rel="stylesheet" />
+<style type="text/css">.container-image {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        border-radius: 5px;
+        padding: 5px;
+    }
+    .banner-img{padding: 15px; margin: 0 auto; }
+    .container-image div img {
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    .search-position {
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+    }
+</style>
+<!-- Custom container to hold the banner -->
+<div class="container-image"><!-- Row in the Grid -->
+<div class="row"><!-- Responsive Column. Takes up all 12 columns -->
+<div class="col-xs-12 banner-img"><!-- Image for homepage --><img alt="Image of search field" class="img-responsive" src="https://td.byui.edu/SBTDPortal/Images/Viewer?fileName=2ba806e2-da85-4819-85a2-df8b4310b827.png&amp;beidInt=1" style="width: 1110px; height: 260px;" /></div>
+</div>
+
+<div class="container-fluid site-search search-position" style="justify-content:center;">
+<div class="container-fluid" style="justify-content:center;">
+<div class="row">
+<div class="col-xs-12">
+<div>
+<div class="gutter-bottom input-group site-search" id="SiteSearch-bb5a7201bdb743488b3ec47a17fe4a7f"><label class="sr-only" for="SiteSearch-text-bb5a7201bdb743488b3ec47a17fe4a7f">Search the client portal</label> <input autocomplete="off" class="form-control" id="SiteSearch-text-bb5a7201bdb743488b3ec47a17fe4a7f" placeholder="How can we help you?" title="To search for items with a specific tag, enter the # symbol followed by the name of the tag. To search for items using exact match, place double quotes around your text." type="text" /> <span class="input-group-btn"><button class="btn btn-default" id="SiteSearch-button-bb5a7201bdb743488b3ec47a17fe4a7f" title="Search" type="button"><span aria-hidden="true" aria-label="icon" contenteditable="false" role="region" tabindex="-1"> <span aria-hidden="true" class="fa fa-fw fa-nopad fa-search blue"></span> </span> <span class="sr-only">Search</span></button> </span></div>
+</div>
+<script>
+                        $(function() {
+                            var siteSearch = new TeamDynamix.SiteSearch({
+                                searchUrl: "/TDClient/79/ITHelpCenter/Shared/Search",
+                                enableAutocompleteSearch: true,
+                                autocompleteSearchUrl: '/TDClient/79/ITHelpCenter/Shared/AutocompleteSearch',
+                                autocompleteResultsPosition: 'fixed',
+                                autocompleteResultsZIndex: 1000,
+                                searchTextBoxSelector: '#SiteSearch-text-bb5a7201bdb743488b3ec47a17fe4a7f',
+                                searchComponentFilterButtonSelector: '#SiteSearch-filter-bb5a7201bdb743488b3ec47a17fe4a7f',
+                                searchButtonSelector: '#SiteSearch-button-bb5a7201bdb743488b3ec47a17fe4a7f',
+                                searchFilterDropdownSelector: '#SiteSearch-dropdown-bb5a7201bdb743488b3ec47a17fe4a7f',
+                                showKnowledgeBaseOption: true,
+                                showServicesOption: true,
+                                showForumsOption: true,
+                                autoFocusSearch: false
+                            });
+                        });
+                    </script></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Bootstrap 3.4.1 JS import --><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
