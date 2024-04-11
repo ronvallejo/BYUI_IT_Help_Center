@@ -1,0 +1,349 @@
+<!-- Homepage Top Module -->
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" rel="stylesheet" />
+<style type="text/css">
+    .container-image {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        border-radius: 5px;
+        padding: 5px;
+    }
+
+    .banner-img {
+        padding: 15px;
+        margin: 0 auto;
+    }
+
+    .container-image div img {
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .search-position {
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+    }
+</style>
+<!-- Custom container to hold the banner -->
+<div class="container-image">
+    <!-- Row in the Grid -->
+    <div class="row">
+        <!-- Responsive Column. Takes up all 12 columns -->
+        <div class="col-xs-12 banner-img">
+            <!-- Image for homepage -->
+            <img alt="Image of search field" class="img-responsive" src="https://github.com/ronvallejo/IT_Help_Center/blob/main/HelpCenter%20Banner.png?raw=true" style="width: 100%; height: auto;" />
+        </div>
+    </div>
+    <div class="container-fluid site-search search-position" style="justify-content:center;">
+        <div class="container-fluid" style="justify-content:center;">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div>
+                        <div class="gutter-bottom input-group site-search" id="SiteSearch-bb5a7201bdb743488b3ec47a17fe4a7f">
+                            <label class="sr-only" for="SiteSearch-text-bb5a7201bdb743488b3ec47a17fe4a7f">Search the client portal</label>
+                            <input autocomplete="off" class="form-control" id="SiteSearch-text-bb5a7201bdb743488b3ec47a17fe4a7f" placeholder="How can we help you?" title="To search for items with a specific tag, enter the # symbol followed by the name of the tag. To search for items using exact match, place double quotes around your text." type="text" />
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" id="SiteSearch-button-bb5a7201bdb743488b3ec47a17fe4a7f" title="Search" type="button">
+                                    <span aria-hidden="true" aria-label="icon" contenteditable="false" role="region" tabindex="-1">
+                                        <span aria-hidden="true" class="fa fa-fw fa-nopad fa-search blue"></span>
+                                    </span>
+                                    <span class="sr-only">Search</span>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                    <script>
+                        $(function() {
+                            var siteSearch = new TeamDynamix.SiteSearch({
+                                searchUrl: "/TDClient/79/ITHelpCenter/Shared/Search",
+                                enableAutocompleteSearch: true,
+                                autocompleteSearchUrl: '/TDClient/79/ITHelpCenter/Shared/AutocompleteSearch',
+                                autocompleteResultsPosition: 'fixed',
+                                autocompleteResultsZIndex: 1000,
+                                searchTextBoxSelector: '#SiteSearch-text-bb5a7201bdb743488b3ec47a17fe4a7f',
+                                searchComponentFilterButtonSelector: '#SiteSearch-filter-bb5a7201bdb743488b3ec47a17fe4a7f',
+                                searchButtonSelector: '#SiteSearch-button-bb5a7201bdb743488b3ec47a17fe4a7f',
+                                searchFilterDropdownSelector: '#SiteSearch-dropdown-bb5a7201bdb743488b3ec47a17fe4a7f',
+                                showKnowledgeBaseOption: true,
+                                showServicesOption: true,
+                                showForumsOption: true,
+                                autoFocusSearch: false
+                            });
+                        });
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Homepage Top Module -->
+<!-- Start Homepage Middle Module -->
+<style type="text/css">
+    :root {
+        --primary-color: #006eb6;
+        --hover-background-color: white;
+        --hover-color: black;
+        --border-color: #ddd;
+    }
+
+    .custom-container {
+        background-color: var(--hover-background-color);
+        color: black;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .button-tile {
+        width: 100%;
+        padding: 15px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        background-color: var(--hover-background-color);
+        color: var(--primary-color);
+        font-size: 24px;
+        font-weight: bold;
+        transition: box-shadow 0.5s, color 0.5s;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    .button-tile:hover {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        color: var(--hover-color);
+        border: 1px solid var(--border-color);
+    }
+
+    @media (max-width: 767px) {
+        .button-tile {
+            margin-bottom: 10px;
+            padding: 10px;
+            font-size: 18px;
+        }
+
+        .custom-container p {
+            max-width: 95%;
+        }
+    }
+</style>
+<div class="container-fluid custom-container">
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="button-tile" onclick="window.open('https://td.byui.edu/TDClient/79/ITHelpCenter/Requests/ServiceDet?ID=754&amp;SIDs=115', '_blank')">
+                <span>
+                    <img alt="Image of ticket" src="https://td.byui.edu/TDPortal/Images/Viewer?fileName=1bd3a47b-7eae-404f-b2e2-ab76b0d547cd.png&amp;beidInt=1" style="height: 64px;" />
+                    <br /> Submit Ticket </span>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="button-tile" onclick="window.open('https://td.byui.edu/TDClient/79/ITHelpCenter/Requests/TicketRequests/', '_blank')">
+                <span>
+                    <img alt="Image of finger over a ticket" src="https://td.byui.edu/TDPortal/Images/Viewer?fileName=dccbade5-8443-4b39-b564-4b2f2723a178.png&amp;beidInt=1" style="height: 64px;" />
+                    <br /> View My Tickets </span>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="button-tile" onclick="window.open('https://td.byui.edu/TDClient/79/ITHelpCenter/Portal/Desktop/Desktop?Q=hCWCZCEEa4TATxYT8zThSKCSWNR92MNvWDRy33vpGQwvhzNb42l2zw__', '_blank')">
+                <span>
+                    <img alt="Image of battery with warning message" src="https://td.byui.edu/TDPortal/Images/Viewer?fileName=5e643a22-0c15-4b34-999c-1df8b598e40f.png&amp;beidInt=1" style="height: 64px;" />
+                    <br /> System Status </span>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="button-tile" onclick="window.open('https://td.byui.edu/TDClient/79/ITHelpCenter/Questions', '_blank')">
+                <span>
+                    <img alt="Image of question box" src="https://td.byui.edu/TDPortal/Images/Viewer?fileName=1251ff98-9ca5-4315-b45b-fe94435716ae.png&amp;beidInt=1" style="height: 64px;" />
+                    <br /> Ask Question </span>
+            </div>
+        </div>
+    </div>
+    <div class="row custom-row">
+        <div class="col-sm-3">
+            <div class="button-tile" onclick="window.open('https://td.byui.edu/TDClient/79/ITHelpCenter/KB/?CategoryID=1875', '_blank')">
+                <span>
+                    <img alt="Image of a library book" src="https://td.byui.edu/TDPortal/Images/Viewer?fileName=a83cc994-980a-47b1-8f31-932051ad059e.png&amp;beidInt=1" style="height: 64px;" />
+                    <br /> Help Guides </span>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="button-tile" onclick="window.open('https://td.byui.edu/TDClient/79/ITHelpCenter/Home/?ID=b163c7aa-9d90-485f-bfca-706cce6b5213', '_blank')">
+                <span>
+                    <img alt="Image of magnifying glass over a library book" src="https://td.byui.edu/TDPortal/Images/Viewer?fileName=bf80f614-bbb0-4dfc-86fd-13f0adc926cb.png&amp;beidInt=1" style="height: 64px;" />
+                    <br /> Browse Products </span>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="button-tile" onclick="window.open('https://td.byui.edu/TDClient/79/ITHelpCenter/Requests/ServiceCatalog', '_blank')">
+                <span>
+                    <img alt="Image of a tool" src="https://td.byui.edu/TDPortal/Images/Viewer?fileName=e5886c94-59d7-438e-8a3c-2ede19bc1183.png&amp;beidInt=1" style="height: 64px;" />
+                    <br /> Browse Services </span>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="button-tile" onclick="window.open('https://td.byui.edu/TDClient/79/ITHelpCenter/Home/?ID=1fd05a1c-eb74-41bd-9564-c5a7d1fa4a87', '_blank')">
+                <span>
+                    <img alt="Contact Us" src="https://td.byui.edu/TDPortal/Images/Viewer?fileName=7f48ad60-b5a2-42f1-8e69-2a31afae90be.png&amp;beidInt=1" style="height: 64px; width: 64px;" />
+                    <br /> Contact Us </span>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Homepage Middle Module -->
+<!-- Start Homepage Bottom Module -->
+<style type="text/css">
+    <style type="text/css">.support-info-container h1,
+    .support-info-container p {
+        color: #006eb6;
+    }
+
+    .tile {
+        background-color: white;
+        color: #006eb6;
+        padding: 20px;
+        transition: box-shadow 0.5s, color 0.5s;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        /* Adjusted for better mobile layout */
+        align-items: center;
+        text-align: center;
+        /* Center text for better readability on mobile */
+        text-decoration: none;
+        width: 100%;
+        /* Ensure it fills the container */
+        margin-bottom: 20px;
+        /* Add space between tiles */
+        border: 1px solid #ddd;
+        /* Subtle border */
+        border-radius: 4px;
+        /* Slightly rounded corners for a softer look */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        /* Soft shadow for depth */
+        /* Flexbox layout to ensure content is centered and tiles are of equal height */
+        display: flex;
+        flex: 1 0 auto;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        /* Full height to be defined by parent container */
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .row>[class*='col-'] {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .tile img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    /* Enhanced responsive adjustments for mobile */
+    @media (max-width: 768px) {
+        .row {
+            margin: 4px 5px;
+            /* Adjust row margins to allow for spacing on the sides */
+        }
+
+        .row>[class*='col-'] {
+            padding: 10px 5px;
+            /* Add padding to columns to create gutter space */
+        }
+
+        .tile {
+            margin-bottom: 5px;
+            /* Adjust the space between tiles for mobile */
+        }
+
+        .tile p {
+            font-size: 14px;
+            /* Smaller font size for mobile */
+        }
+
+        .tile img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 0px;
+        }
+
+        .tile h2 {
+            font-size: 18px;
+            color: #000;
+        }
+
+        .tile img {
+            width: 50px;
+            /* Smaller icons for mobile */
+            height: 50px;
+        }
+    }
+</style>
+<div class="support-info-container">
+    <h1 style="text-align: center;">
+        <span style="font-size:28px;">
+            <span style="color:#000000;">
+                <strong>Support</strong>
+            </span>
+        </span>
+    </h1>
+    <p style="text-align: center;">
+        <span style="color:#000000;">
+            <strong>Need Tech Support? Choose a support option below!</strong>
+        </span>
+    </p>
+</div>
+<div class="container-fluid custom-container">
+    <div class="row">
+        <!-- Adjusted column classes for responsiveness -->
+        <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="tile" onclick="window.open('tel:+12084969009', '_blank')">
+                <img alt="Image of phone" src="https://td.byui.edu/SBTDPortal/Images/Viewer?fileName=cb5c35b0-55fc-4ccc-b9a3-4241f0bdf6f2.png&amp;beidInt=1" style="height: 64px; width: 64px;" />
+                <h2>
+                    <strong>Call Us</strong>
+                </h2>
+                <p>Call us at <u>
+                        <strong>208-496-9009</strong>
+                    </u>. We have highly-trained IT staff ready to troubleshoot issues, answer questions, and solve incidents. <br /> *phone agents are available only during business hours </p>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="tile" onclick="ivyapi.open()">
+                <img alt="Image of chat bubble" src="https://td.byui.edu/SBTDPortal/Images/Viewer?fileName=286d65b5-eeb9-47fe-b10f-fc57908aafa0.png&amp;beidInt=1" style="width: 64px; height: 64px;" />
+                <h2>
+                    <strong>Chat</strong>
+                </h2>
+                <p>Need help? Click the chat bubble. Our powerful chatbot uses latest GPT tech. If our bot can&#39;t help, ask for a live agent. <br /> *live agents are available only during business hours </p>
+            </div>
+        </div>
+        <!-- Adjusted the layout to ensure proper nesting of the row -->
+        <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="tile" onclick="window.open('https://td.byui.edu/TDClient/79/ITHelpCenter/KB/?CategoryID=1875', '_blank')">
+                <img alt="Image of help guide" src="https://td.byui.edu/SBTDPortal/Images/Viewer?fileName=dc53d2f0-daa2-4fa0-878c-4a1ab863ade8.png&amp;beidInt=1" style="height: 64px; width: 64px;" />
+                <h2>
+                    <strong>Help Guides</strong>
+                </h2>
+                <p>Our helpful library of support articles for common technical issues, problems, or questions. Our knowledge base is purpose built for you. Search by keywords, topics, or subjects.&nbsp;</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="support-info-container">
+    <p style="text-align: center;">*Business Hours: Mon - Fri 7:30 AM - 8:00 PM, Sat 10:00 AM - 4:00 PM Mountain Time (excluding weekly devotional, forum hour, and University Recognized holidays)</p>
+</div>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<!-- End Homepage Bottom Module -->
